@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1771952966644,
+      "tag": "0000_quiet_red_wolf",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1771953085077,
+      "tag": "0001_wandering_franklin_storm",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1775237834103,
+      "tag": "0002_complete_namora",
+      "breakpoints": true
+    }
+  ]
+}
