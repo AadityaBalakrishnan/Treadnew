@@ -11,7 +11,7 @@ export interface Database {
     Tables: {
       users: {
         Row: {
-          id: string; // uuid from auth.users mapping ideally, or direct generated
+          id: string;
           name: string | null;
           email: string;
           role: "user" | "club_admin" | "org_admin";
@@ -31,13 +31,14 @@ export interface Database {
           role?: "user" | "club_admin" | "org_admin";
           created_at?: string;
         };
+        Relationships: [];
       };
       clubs: {
         Row: {
-          id: string; // uuid
+          id: string;
           name: string;
           description: string | null;
-          founder_id: string; // references users.id
+          founder_id: string;
           is_private: boolean;
           created_at: string;
         };
@@ -57,17 +58,18 @@ export interface Database {
           is_private?: boolean;
           created_at?: string;
         };
+        Relationships: [];
       };
       events: {
         Row: {
-          id: string; // uuid
+          id: string;
           title: string;
           type: "running" | "other";
           city: string | null;
           location: string | null;
-          club_id: string | null; // references clubs.id
-          creator_id: string; // references users.id
-          date: string | null; // timestamp
+          club_id: string | null;
+          creator_id: string;
+          date: string | null;
           created_at: string;
         };
         Insert: {
@@ -92,6 +94,7 @@ export interface Database {
           date?: string | null;
           created_at?: string;
         };
+        Relationships: [];
       };
     };
     Views: {
@@ -101,6 +104,9 @@ export interface Database {
       [_ in never]: never;
     };
     Enums: {
+      [_ in never]: never;
+    };
+    CompositeTypes: {
       [_ in never]: never;
     };
   };
